@@ -251,38 +251,59 @@ using namespace std;
 
 
 /*小明看花，小红好奇*/
-#define _CRT_SECURE_NO_WARNINGS
-#include <iostream>
-#include <set>
-#include <vector>
-#include <unordered_set>
-#include<stdio.h>
-using namespace std;
-int main(){
-	int m, n;
-	while (cin >> n >> m){
-		vector<int> a(n);
-		for (int i = 0; i < n; ++i){
-			scanf_s("%d", &a[i]);
-		}
-		vector<vector<int>> ans(n, vector<int>(n, 1)); // ans[i][j] 表示从时间[i + 1， j + 1]看了几种花，其中i <= j;
-		for (int i = 0; i < n; ++i){
-			unordered_set<int> set_a;
-			set_a.insert(a[i]);
-			for (int j = i; j < n; ++j){
-				set_a.insert(a[j]);
-				ans[i][j] = set_a.size();
-			}
-		}
-		int Q;
-		cin >> Q;
-		while (Q--){
-			int l, r;
-			scanf("%d %d", &l, &r);
-			//printf("%d\n",ans[l - 1][r - 1]);
-			//cin >> l >> r;
-			cout << ans[l - 1][r - 1] << endl;
-		}
-	}
-	return 0;
-}
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <iostream>
+//#include <set>
+//#include <vector>
+//#include <unordered_set>
+//#include<stdio.h>
+//using namespace std;
+//int main(){
+//	int m, n;
+//	while (cin >> n >> m){
+//		vector<int> a(n);
+//		for (int i = 0; i < n; ++i){
+//			scanf_s("%d", &a[i]);
+//		}
+//		vector<vector<int>> ans(n, vector<int>(n, 1)); // ans[i][j] 表示从时间[i + 1， j + 1]看了几种花，其中i <= j;
+//		for (int i = 0; i < n; ++i){
+//			unordered_set<int> set_a;
+//			set_a.insert(a[i]);
+//			for (int j = i; j < n; ++j){
+//				set_a.insert(a[j]);
+//				ans[i][j] = set_a.size();
+//			}
+//		}
+//		int Q;
+//		cin >> Q;
+//		while (Q--){
+//			int l, r;
+//			scanf("%d %d", &l, &r);
+//			//printf("%d\n",ans[l - 1][r - 1]);
+//			//cin >> l >> r;
+//			cout << ans[l - 1][r - 1] << endl;
+//		}
+//	}
+//	return 0;
+//}
+
+//#include<iostream>
+//#include<string>
+//#include<stdlib.h>
+//#include<algorithm>
+//using namespace std;
+//
+//int main()
+//{
+//	string s1, s2;
+//	int n, m;
+//	cin >> n >> m;
+//	cin >> s1 >> s2;
+//	sort(s1.begin(), s1.end());
+//	sort(s2.begin(), s2.end());
+//	reverse(s1.begin(), s1.end());
+//	reverse(s2.begin(), s2.end());
+//	int atoi(s2.c_str());
+//	cout <<s2 << endl;
+//	return 0;
+//}
