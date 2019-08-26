@@ -65,7 +65,7 @@ public:
 		std::string url = BACKUP_URI + name.filename().string();
 		//实例化一个 httplib 的客户端对象
 		//httplib::SSLClient cil(SERVER_IP, SERVER_PORT);
-		httplib::Client cil;
+		httplib::Client cil(SERVER_IP, SERVER_PORT);
 
 		//cil.set_ca_cert_path("./cert.pem");
 		//cil.enable_server_certificate_verification(false);
